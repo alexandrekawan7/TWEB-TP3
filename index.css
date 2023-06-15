@@ -42,6 +42,19 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#presentation::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 3vh;
+    left: 1vw;
+    background: url("dots.svg") 0 0 no-repeat;
+    width: 10vw;
+    height: 13vh;
 }
 
 #presentation-content {
@@ -53,7 +66,6 @@ nav ul li a {
 #presentation-btn {
     width: 10vw;
     font-size: large;
-    
     padding: 3%;
 }
 
@@ -83,6 +95,8 @@ nav ul li a {
     padding-right: 18vw;
 }
 
+
+
 #services-header h2 {
     font-size: xx-large;
 }
@@ -100,7 +114,14 @@ nav ul li a {
     align-items: center;
     flex-wrap: wrap;
     gap: 1vw;
-    
+}
+
+#bubble {
+    z-index: -1;
+    position: absolute;
+    transform: rotate(21deg);
+    left: -7%;
+    width: 40%;
 }
 
 .services-catalog-item {
